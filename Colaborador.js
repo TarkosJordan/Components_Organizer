@@ -1,5 +1,8 @@
 export class Colaborador{
-    
+    constructor(){
+        Colaborador.numeroColaboradores++
+    }
+    static numeroColaboradores = 0
     nome
     numeroCracha
     cargo

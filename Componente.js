@@ -1,5 +1,9 @@
 export class Componente{
 
+    constructor(){
+        Componente.numeroComponentes++
+    }
+    static numeroComponentes = 0
     tipo
     nome
     revisao = "0"
