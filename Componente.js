@@ -1,4 +1,5 @@
 import { Colaborador } from './Colaborador.js'
+import { Projetista } from './Projetista.js'
 
 export class Componente{
 
@@ -7,7 +8,8 @@ export class Componente{
         Componente.numeroComponentes++
         this.nome = nome
         this.revisao = revisao
-        this.responsavel = ""
+        this.responsavel = {}
+        this.responsavelTecnico = {}
         this.status = ""
         this.setorPertencente = ""
         this.idComponente = ""
@@ -26,39 +28,50 @@ export class Componente{
     defineDescricaoComponente(){
         this.descricaoComponente = `${this.nome}.${this.incremental};REV${this.revisao}`
     }
+
+    // Acessores de atributos
     setNome(nome){
         this.nome = nome
-    }
-    setRevisao(revisao){
-        this.revisao = revisao
-    }
-    setResponsavel(responsavel){
-        if(responsavel instanceof Colaborador)
-            this.responsavel = responsavel
-    }
-    setStatus(status){
-        this.status = status
-    }
-    setSetorPertencente(setorPertencente){
-        this.setorPertencente = setorPertencente
-    }
-    setIdComponente(idComponente){
-        this.idComponente = idComponente
     }
     getNome(){
         return this.nome
     }
+    setRevisao(revisao){
+        this.revisao = revisao
+    }
     getRevisao(){
         return this.revisao
+    }
+    setResponsavel(responsavel){
+        if(responsavel instanceof Colaborador){
+            this.responsavel = responsavel
+        }
     }
     getResponsavel(){
         return this.responsavel
     }
+    setResponsavelTecnico(responsavelTecnico){
+        if(responsavelTecnico instanceof Projetista){
+            this.responsavelTecnico = responsavelTecnico
+        }
+    }
+    getResponsavelTecnico(){
+        return this.responsavelTecnico
+    }
+    setStatus(status){
+        this.status = status
+    }
     getStatus(){
         return this.status
     }
+    setSetorPertencente(setorPertencente){
+        this.setorPertencente = setorPertencente
+    }
     getSetorPertencente(){
         return this.setorPertencente
+    }
+    setIdComponente(idComponente){
+        this.idComponente = idComponente
     }
     getIdComponente(){
         return this.idComponente
@@ -66,4 +79,5 @@ export class Componente{
     getDescricaoComponente(){
         return this.descricaoComponente
     }
+    //end region
 }

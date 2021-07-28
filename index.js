@@ -30,22 +30,36 @@ listaComponentes.push(componente4)
 componente4.defineIncremental(listaComponentes)
 componente4.defineDescricaoComponente()
 
-let colaborador1 = new Colaborador("Tarsis Orsi", "1084")
+let colaborador1 = new Projetista("Tarsis Orsi", "1084")
 listaColaboradores.push(colaborador1)
 
-con1sole.log(componente1.incremental)
-console.log(componente2.incremental)
-console.log(componente3.incremental)
+let colaborador2 = new Apontador("Marlise", "890")
+listaColaboradores.push(colaborador2)
 
-componente1.setResponsavel(colaborador1)
+let colaborador3 = new Operador("Zero", "0")
+listaColaboradores.push(colaborador3)
 
-console.log(componente1.getNome())
-console.log(colaborador1.getNome())
+componente1.setResponsavel(colaborador2)
+componente1.setResponsavelTecnico(colaborador1)
 
 console.log(componente1.getResponsavel())
+console.log(componente1.getResponsavelTecnico())
 
-console.log(Componente.numeroComponentes)
+console.log(`O numero total de colaboradores é: ${Colaborador.numeroColaboradores}
 
+    Número de Projetistas: ${Projetista.numeroProjetistas}
+    Número de Apontadores: ${Apontador.numeroApontadores}
+    Número de Operadores: ${Operador.numeroOperadores}
+`)
+
+console.log(`O numero total de componentes é: ${Componente.numeroComponentes}
+
+    Número de Fixtures: ${Fixture.numeroFixtures}
+    Número de Chicotes: ${Chicote.numeroChicotes}
+    Número de Bases: ${Base.numeroBases}
+`)
+
+console.log("Lista de Componentes:\n")
 escreveComponentes(listaComponentes)
 
 function escreveComponentes(vetorComponentes){
