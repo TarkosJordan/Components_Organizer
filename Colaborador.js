@@ -1,6 +1,10 @@
+//Classe abstrata
 export class Colaborador{
     static numeroColaboradores = 0
     constructor(nome, numeroCracha){
+        if(this.constructor == Colaborador){
+            throw new Error("Erro, você não pode instaciar um objeto de uma classe abstrata")
+        }
         Colaborador.numeroColaboradores++
         this.nome = nome
         this.numeroCracha = numeroCracha

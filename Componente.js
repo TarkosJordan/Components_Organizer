@@ -1,10 +1,14 @@
 import { Colaborador } from './Colaborador.js'
 import { Projetista } from './Projetista.js'
 
+//Classe abstrata
 export class Componente{
 
     static numeroComponentes = 0
     constructor(nome, revisao){
+        if(this.constructor == Componente){
+            throw new Error("Erro, você não pode instaciar um objeto de uma classe abstrata")
+        }
         Componente.numeroComponentes++
         this.nome = nome
         this.revisao = revisao
