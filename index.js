@@ -23,6 +23,8 @@ componente3.defineDescricaoComponente()
 
 let componente4 = new Fixture("FX-08", 0)
 vetorComponentes.push(componente4)
+componente4.defineIncremental(vetorComponentes)
+componente4.defineDescricaoComponente()
 
 let colaborador1 = new Colaborador("Tarsis Orsi", "1084")
 
@@ -30,7 +32,8 @@ console.log(componente1.incremental)
 console.log(componente2.incremental)
 console.log(componente3.incremental)
 
-componente1.setResponsavel(colaborador1)
+//componente1.setResponsavel(colaborador1)
+componente1.setResponsavel("tarsis")
 
 console.log(componente1.getNome())
 console.log(colaborador1.getNome())

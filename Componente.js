@@ -1,3 +1,5 @@
+import { Colaborador } from './Colaborador.js'
+
 export class Componente{
 
     static numeroComponentes = 0
@@ -31,7 +33,8 @@ export class Componente{
         this.revisao = revisao
     }
     setResponsavel(responsavel){
-        this.responsavel = responsavel
+        if(responsavel instanceof Colaborador)
+            this.responsavel = responsavel
     }
     setStatus(status){
         this.status = status
