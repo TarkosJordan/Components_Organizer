@@ -5,7 +5,7 @@ export class Colaborador{
         this.nome = nome
         this.numeroCracha = numeroCracha
         this.cargo = ""
-        this.privilegio = ""
+        this.privilegio = 0
         this.setor = ""
     }
 
