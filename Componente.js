@@ -9,7 +9,8 @@ export class Componente{
         this.status = ""
         this.setorPertencente = ""
         this.idComponente = ""
-        this.incremental = 1 
+        this.incremental = 1
+        this.descricaoComponente = "" 
     }
     defineIncremental(vetorComponentes){
         let contaComponentes = 0
@@ -19,6 +20,9 @@ export class Componente{
             }
             this.incremental = contaComponentes
         });
+    }
+    defineDescricaoComponente(){
+        this.descricaoComponente = `${this.nome}.${this.incremental};REV${this.revisao}`
     }
     setNome(nome){
         this.nome = nome
@@ -55,5 +59,8 @@ export class Componente{
     }
     getIdComponente(){
         return this.idComponente
+    }
+    getDescricaoComponente(){
+        return this.descricaoComponente
     }
 }
