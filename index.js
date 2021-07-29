@@ -1,11 +1,11 @@
-import { Colaborador } from './Colaborador.js'
-import { Componente } from './Componente.js' 
-import { Chicote } from './Chicote.js'
-import { Fixture } from './Fixture.js'
-import { Base } from './Base.js'
-import { Projetista } from './Projetista.js'
-import { Apontador } from './Apontador.js'
-import { Operador } from './Operador.js'
+import { Colaborador } from './Colaboradores/Colaborador.js'
+import { Componente } from './Componentes/Componente.js' 
+import { Chicote } from './Componentes/Chicote.js'
+import { Fixture } from './Componentes/Fixture.js'
+import { Base } from './Componentes/Base.js'
+import { Projetista } from './Colaboradores/Projetista.js'
+import { Apontador } from './Colaboradores/Apontador.js'
+import { Operador } from './Colaboradores/Operador.js'
  
 let listaComponentes = new Array()
 let listaColaboradores = new Array()

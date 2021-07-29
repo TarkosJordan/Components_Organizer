@@ -1,5 +1,5 @@
-import { Colaborador } from './Colaborador.js'
-import { Projetista } from './Projetista.js'
+import { Colaborador } from '../Colaboradores/Colaborador.js'
+import { Projetista } from '../Colaboradores/Projetista.js'
 
 //Classe abstrata
 export class Componente{
