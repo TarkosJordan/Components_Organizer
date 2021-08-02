@@ -11,8 +11,14 @@ export class Colaborador{
         this.cargo = ""
         this.privilegio = 0
         this.setor = ""
+        this.senha
     }
-
+    cadastrarSenha(senha){
+        this.senha = senha
+    }
+    autenticar(senha){
+        return senha == this.senha
+    }
     setNome(nome){
         this.nome = nome
     }
